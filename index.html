@@ -1,0 +1,1991 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ibnat | Web Developer & Designer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.          jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.      min.css">
+        
+    <style>
+                * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background: #050505;
+            color: #fff;
+            line-height: 1.6;
+        }
+        
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        section {
+            padding: 100px 20px;
+        }
+        
+        .wrap {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        
+        .green {
+            color: #A855F7;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: #A855F7;
+            color: #050505;
+            font-weight: bold;
+            padding: 12px 26px;
+            border: 1px solid #A855F7;
+            border-radius: 30px;
+            font-size: 15px;
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            background: #9333EA;
+        }
+        
+        .btn-line {
+            display: inline-block;
+            color: #fff;
+            padding: 12px 26px;
+            border: 1px solid #555;
+            border-radius: 30px;
+            font-size: 15px;
+        }
+        
+        .btn-line:hover {
+            border-color: #A855F7;
+            color: #A855F7;
+        }
+        
+        /* ---------- navbar ---------- */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(5, 5, 5, 0.92);
+            z-index: 10;
+        }
+        
+        .navbar .wrap {
+            max-width: 1200px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 20px;
+        }
+        
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+        }
+        
+        .menu a {
+            margin: 0 14px;
+            font-size: 14px;
+        }
+        
+        .menu a:hover,
+        .menu a.active {
+            color: #A855F7;
+        }
+        
+        .nav-btn {
+            border: 1px solid #A855F7;
+            color: #A855F7;
+            padding: 8px 18px;
+            border-radius: 30px;
+            font-size: 14px;
+        }
+        
+        .nav-btn:hover {
+            background: #A855F7;
+            color: #050505;
+        }
+        
+        #menu-toggle {
+            display: none;
+        }
+        
+        .menu-btn {
+            display: none;
+            color: #fff;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        
+        /* ---------- mobile ---------- */
+        @media (max-width: 900px) {
+            .navbar .wrap {
+                flex-wrap: wrap;
+                padding: 14px 20px;
+            }
+        
+            .menu-btn {
+                display: block;
+            }
+        
+            .nav-btn {
+                display: none;
+            }
+        
+            .menu {
+                display: none;
+                order: 3;
+                width: 100%;
+                padding-top: 10px;
+            }
+        
+            #menu-toggle:checked ~ .menu {
+                display: block;
+            }
+        
+            .menu a {
+                display: block;
+                margin: 0;
+                padding: 12px 0;
+                font-size: 15px;
+                border-top: 1px solid #1a1a1a;
+            }
+        
+            .hero {
+                padding-top: 120px;
+            }
+        
+            section {
+            padding: 50px 20px;
+            }
+        }
+            
+        /* ---------- hero ---------- */
+        .hero {
+            min-height: 700px;
+            padding-top: 130px;
+            position: relative;
+        }
+        
+        .hero .wrap {
+            max-width: 1200px;
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+        
+        .hero-text {
+            flex: 1;
+        }
+        
+        .hello {
+            font-size: 14px;
+            margin-bottom: 14px;
+        }
+        
+        .hello::after {
+            content: "";
+            display: inline-block;
+            width: 9px;
+            height: 9px;
+            background: #A855F7;
+            border-radius: 50%;
+            margin-left: 8px;
+        }
+        
+        .hero-text h1 {
+            font-size: 52px;
+            line-height: 1.15;
+            margin-bottom: 18px;
+        }
+        
+        .hero-text p {
+            color: #b5b5b5;
+            max-width: 480px;
+            margin-bottom: 28px;
+        }
+        
+        .hero-btn {
+            display: flex;
+            gap: 14px;
+            margin-bottom: 40px;
+        }
+        
+        .stats {
+            display: flex;
+            gap: 40px;
+        }
+        
+        .stat h3 {
+            font-size: 28px;
+            color: #A855F7;
+        }
+        
+        .stat p {
+            font-size: 13px;
+            color: #b5b5b5;
+            margin: 0;
+        }
+        
+        .hero-img {
+            flex: 1;
+            min-width: 0;
+            min-height: 440px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+        }
+        
+        .hero-img img {
+            width: 100%;
+            max-width: 600px;
+            max-height: 83vh;
+            object-fit: contain;
+            display: block;
+        }
+        
+        .social {
+            position: absolute;
+            right: 24px;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            font-size: 18px;
+        }
+        
+        .social a:hover {
+            color: #A855F7;
+        }
+        
+        /* ---------- mobile ---------- */
+        @media (max-width: 900px) {
+            .navbar .wrap {
+                /* flex-direction: ; */
+                gap: 8px;
+            }
+        
+            .menu {
+                text-align: center;
+            }
+        
+            .menu a {
+                margin: 0 6px;
+                font-size: 13px;
+            }
+        
+            .nav-btn {
+                display: none;
+            }
+        
+            .hero {
+                padding-top: 100px;
+            }
+        
+            .hero .wrap {
+                flex-direction: column;
+            }
+        
+            .hero-text h1 {
+                font-size: 34px;
+            }
+        
+            .hero-img {
+                min-height: 260px;
+                width: 100%;
+            }
+        
+            .social {
+                flex-direction: row;
+                position: static;
+                transform: none;
+                justify-content: center;
+                margin-top: 30px;
+            }
+        }
+        
+        /* ---------- about ---------- */
+        .ibnat-about{
+            background-color:	#100A18;
+        }
+        
+        
+        .ibnat-about .wrap {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+        
+        .about-img {
+            flex: 1;
+            min-width: 0;
+            height: 380px;
+            border: 1px dashed #333;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid #A855F7;
+        }
+        
+        .about-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            
+        }
+        
+        .about-text {
+            flex: 1;
+            min-width: 0;
+        }
+        
+        .about-text h2 {
+            font-size: 40px;
+            margin-bottom: 14px;
+        }
+        
+        .about-text p {
+            color: #b5b5b5;
+            margin-bottom: 14px;
+        }
+        
+        /* ---------- mobile ---------- */
+        @media (max-width: 900px) {
+            .ibnat-about .wrap {
+                flex-direction: column;
+            }
+        
+            .about-img {
+                width: 100%;
+                height: 260px;
+            }
+        
+            .ibnat-about{
+                padding: 50px 20px;
+            }
+        }
+        
+        
+        
+        /* ---------- services ---------- */
+        
+        .ibnat-services{
+            background-color:	#100A18;
+        }
+        
+        .ibnat-services .wrap {
+            max-width: 1200px;
+            display: flex;
+            align-items: flex-start;
+            gap: 40px;
+        }
+        
+        .service-left {
+            flex: 0 0 38%;
+            min-width: 0;
+        }
+        
+        .service-badge {
+            display: inline-block;
+            border: 1px solid rgba(168, 85, 247, 0.4);
+            border-radius: 10px;
+            padding: 8px 18px;
+            font-size: 15px;
+            margin-bottom: 26px;
+        }
+        
+        .service-label {
+            font-size: 11px;
+            letter-spacing: 1.5px;
+            color: #b5b5b5;
+            margin-bottom: 10px;
+        }
+        
+        .service-label::after {
+            content: "";
+            display: inline-block;
+            width: 7px;
+            height: 7px;
+            background: #A855F7;
+            border-radius: 50%;
+            margin-left: 8px;
+        }
+        
+        .service-left h2 {
+            font-size: 38px;
+            line-height: 1.2;
+            margin-bottom: 16px;
+        }
+        
+        .service-desc {
+            color: #b5b5b5;
+            font-size: 14px;
+            margin-bottom: 24px;
+        }
+        
+        
+        .service-grid {
+             flex: 1;
+            min-width: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+        
+        .service-card {
+            width: calc((100% - 32px) / 3);
+            position: relative;
+            min-height: 190px;
+            padding: 22px 20px 50px;
+            background: #0a0a0a;
+            border: 1px solid rgba(168, 85, 247, 0.35);
+            border-radius: 14px;
+            box-shadow: 0 0 14px rgba(168, 85, 247, 0.12);
+        }
+        
+        .service-card:hover {
+            border-color: #A855F7;
+            box-shadow: 0 0 20px rgba(168, 85, 247, 0.3);
+        }
+        
+        .service-card > i {
+            font-size: 24px;
+            color: #A855F7;
+            margin-bottom: 14px;
+            display: block;
+        }
+        
+        .service-card h3 {
+            font-size: 15px;
+            margin-bottom: 6px;
+        }
+        
+        .service-card p {
+            font-size: 12px;
+            color: #9a9a9a;
+        }
+        
+        .service-arrow {
+            position: absolute;
+            right: 14px;
+            bottom: 14px;
+            width: 28px;
+            height: 28px;
+            line-height: 26px;
+            text-align: center;
+            font-size: 12px;
+            color: #A855F7;
+            border: 1px solid rgba(168, 85, 247, 0.5);
+            border-radius: 50%;
+        }
+        
+        .service-arrow:hover {
+            background: #A855F7;
+            color: #050505;
+        }
+        
+        /* ---------- mobile --------- */
+        @media (max-width: 900px) {
+            .ibnat-services .wrap {
+                flex-direction: column;
+            }
+        
+            .service-left {
+                flex: none;
+                width: 100%;
+            }
+        
+            .service-card {
+                width: calc((100% - 16px) / 2);
+            }
+        }
+        
+        @media (max-width: 600px) {
+            .service-card {
+                width: 100%;
+            }
+        }
+        
+        
+        /* ---------- skills ---------- */
+        .ibnat-skills {
+            position: relative;
+            overflow: hidden;
+            padding: 70px 20px;
+        }
+        
+        .ibnat-skills .wrap {
+            max-width: 1200px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .skill-left {
+            max-width: 580px;
+        }
+        
+        .skill-tag-row {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 26px;
+        }
+        
+        .skill-tag {
+            border: 1px solid rgba(168, 85, 247, 0.5);
+            border-radius: 30px;
+            padding: 8px 22px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        
+        .skill-line {
+            width: 100px;
+            height: 1px;
+            background: rgba(168, 85, 247, 0.5);
+        }
+        
+        .skill-label {
+            font-size: 11px;
+            letter-spacing: 2px;
+            color: #b5b5b5;
+            margin-bottom: 10px;
+        }
+        
+        .skill-label::after {
+            content: "";
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            background: #A855F7;
+            border-radius: 50%;
+            margin-left: 8px;
+        }
+        
+        .skill-left h2 {
+            font-size: 42px;
+            line-height: 1.15;
+            margin-bottom: 16px;
+        }
+        
+        .skill-desc {
+            color: #b5b5b5;
+            font-size: 14px;
+            max-width: 430px;
+            margin-bottom: 24px;
+        }
+        
+        .skill-row {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+        
+        .skill-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: #0a0a0a;
+            border: 1px solid #222;
+            border-radius: 10px;
+            padding: 10px 16px;
+            font-size: 13px;
+        }
+        
+        .skill-item:hover,
+        .skill-item.active {
+            border-color: rgba(168, 85, 247, 0.6);
+        }
+        
+        .skill-item i {
+            font-size: 24px;
+        }
+        
+        .skill-badge {
+            width: 24px;
+            height: 24px;
+            line-height: 24px;
+            text-align: center;
+            color: #fff;
+            font-size: 13px;
+            font-weight: bold;
+        }
+        
+        .skill-badge.elementor {
+            background: #d30c5c;
+            border-radius: 50%;
+        }
+        
+        .skill-badge.webflow {
+            background: #146ef5;
+            border-radius: 5px;
+        }
+        
+        
+        .skill-left {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .skill-img {
+            position: absolute;
+            top: 0;
+            right: 20px;
+            bottom: 0;
+            width: 50%;
+            z-index: 1;
+        }
+        
+        .skill-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .skill-img::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            width: 30%;
+            background: linear-gradient(to right,          #050505, transparent);
+        }
+        
+        
+        
+        /* ---------- mobile ---------- */
+        @media (max-width: 900px) {
+            .skill-left h2 {
+                font-size: 32px;
+            }
+        
+            .skill-row {
+                flex-wrap: wrap;
+            }
+        
+            .skill-img {
+                position: static;
+                width: 100%;
+                height: 300px;
+                margin-top: 30px;
+            }
+        
+            .skill-img::before {
+                display: none;
+            }
+        
+            .ibnat-skills{
+                padding: 50px 20px;
+            }
+        }
+        
+        
+        /* ---------- portfolio ---------- */
+        .ibnat-portfolio .wrap {
+            max-width: 1200px;
+        }
+        
+        .project-label {
+            font-size: 11px;
+            letter-spacing: 2px;
+            color: #b5b5b5;
+            margin-bottom: 10px;
+        }
+        
+        .project-title-main {
+            font-size: 42px;
+            line-height: 1.15;
+            margin-bottom: 16px;
+        }
+        
+        .project-desc {
+            color: #b5b5b5;
+            font-size: 14px;
+            margin-bottom: 30px;
+        }
+        
+        .project-box {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 18px;
+        }
+        
+        .project-card {
+            width: calc((100% - 36px) / 3);
+            display: flex;
+            flex-direction: column;
+            padding: 16px 16px 14px;
+            background: linear-gradient(180deg, #0b1407,           #050505);
+            border: 1px solid rgba(168, 85, 247, 0.45);
+            border-radius: 12px;
+            box-shadow: 0 0 14px rgba(168, 85, 247, 0.1);
+        }
+        
+        .project-card:hover {
+            border-color: #A855F7;
+            box-shadow: 0 0 22px rgba(168, 85, 247, 0.3);
+        }
+        
+        .project-num {
+            font-size: 11px;
+            color: #b5b5b5;
+            margin-bottom: 8px;
+        }
+        
+        .project-img {
+            height: 210px;
+            margin-bottom: 14px;
+            border: 1px solid #1f2a14;
+            border-radius: 6px;
+            overflow: hidden;
+        }
+        
+        .project-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
+            display: block;
+        }
+        
+        .project-card h3 {
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+        
+        .project-card p {
+            font-size: 12.5px;
+            color: #b5b5b5;
+            margin-bottom: 16px;
+        }
+        
+        .project-live {
+            margin-top: auto;
+            text-align: right;
+        }
+        
+        .project-live a {
+            display: inline-block;
+            font-size: 12px;
+            color: #A855F7;
+            border-bottom: 1px solid #A855F7;
+            padding-bottom: 2px;
+        }
+        
+        .project-live a:hover {
+            color: #fff;
+            border-color: #fff;
+        }
+        
+        /* ---------- mobile ---------- */
+        @media (max-width: 900px) {
+            .project-title-main {
+                font-size: 32px;
+            }
+        
+            .project-card {
+                width: calc((100% - 18px) / 2);
+            }
+        }
+        
+        @media (max-width: 600px) {
+            .project-card {
+                width: 100%;
+            }
+        }
+        
+        /* ---------- contact ---------- */
+        .ibnat-contact{
+            background-color:	#100A18;
+        }
+        
+        
+        .ibnat-contact .wrap {
+            max-width: 1200px;
+            display: flex;
+            align-items: center;
+            gap: 60px;
+        }
+        
+        .contact-left {
+            flex: 0 0 42%;
+            min-width: 0;
+        }
+        
+        .contact-left h2 {
+            font-size: 42px;
+            line-height: 1.15;
+            margin-bottom: 16px;
+        }
+        
+        .contact-desc {
+            color: #b5b5b5;
+            font-size: 14px;
+            max-width: 430px;
+            margin-bottom: 24px;
+        }
+        
+        .contact-info {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 12px 18px;
+            margin-bottom: 12px;
+            background: #080d06;
+            border: 1px solid rgba(168, 85, 247, 0.35);
+            border-radius: 12px;
+            box-shadow: 0 0 12px rgba(168, 85, 247, 0.08);
+        }
+        
+        .contact-info:hover {
+            border-color: #A855F7;
+        }
+        
+        .contact-icon {
+            width: 46px;
+            height: 46px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            color: #A855F7;
+            background: #0f1f08;
+            border: 1px solid rgba(168, 85, 247, 0.5);
+            border-radius: 50%;
+        }
+        
+        .contact-text h4 {
+            font-size: 14px;
+        }
+        
+        .contact-text p {
+            font-size: 12px;
+            color: #b5b5b5;
+        }
+        
+        .contact-text a:hover {
+            color: #A855F7;
+        }
+        
+        .contact-arrow {
+            margin-left: auto;
+            width: 26px;
+            height: 26px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 11px;
+            color: #A855F7;
+            border: 1px solid rgba(168, 85, 247, 0.5);
+            border-radius: 50%;
+        }
+        
+        .contact-arrow:hover {
+            background: #A855F7;
+            color: #050505;
+        }
+        
+        .contact-stats {
+            display: flex;
+            margin: 26px 0 20px;
+        }
+        
+        .contact-stat {
+            padding: 0 24px;
+            border-left: 1px solid #2a2a2a;
+        }
+        
+        .contact-stat:first-child {
+            padding-left: 0;
+            border-left: none;
+        }
+        
+        .contact-stat h3 {
+            font-size: 24px;
+            color: #A855F7;
+        }
+        
+        .contact-stat p {
+            font-size: 12px;
+            color: #b5b5b5;
+        }
+        
+        .contact-note {
+            font-family: "Brush Script MT", "Segoe Script",            cursive;
+            font-size: 26px;
+            color: #A855F7;
+            transform: rotate(-3deg);
+            transform-origin: left;
+        }
+        
+        /* ---------- contact form ---------- */
+        .contact-right {
+            flex: 1;
+            min-width: 0;
+        }
+        
+        .contact-form {
+            padding: 28px;
+            background: linear-gradient(180deg, #0b1407,           #050505);
+            border: 1px solid rgba(168, 85, 247, 0.4);
+            border-radius: 16px;
+            box-shadow: 0 0 20px rgba(168, 85, 247, 0.1);
+        }
+        
+        .form-bar {
+            display: block;
+            width: 36px;
+            height: 3px;
+            background: #A855F7;
+            margin-bottom: 16px;
+        }
+        
+        .contact-form h3 {
+            font-size: 28px;
+            margin-bottom: 8px;
+        }
+        
+        .form-sub {
+            font-size: 12px;
+            color: #b5b5b5;
+            max-width: 260px;
+            margin-bottom: 22px;
+        }
+        
+        .form-row {
+            display: flex;
+            gap: 14px;
+            margin-bottom: 14px;
+        }
+        
+        .field {
+            flex: 1;
+            min-width: 0;
+            position: relative;
+        }
+        
+        .field i {
+            position: absolute;
+            left: 16px;
+            top: 15px;
+            font-size: 14px;
+            color: #cfcfcf;
+        }
+        
+        .field input,
+        .field textarea {
+            width: 100%;
+            padding: 14px 14px 14px 46px;
+            background: #080d06;
+            color: #fff;
+            border: 1px solid rgba(168, 85, 247, 0.25);
+            border-radius: 8px;
+            font-size: 13px;
+            font-family: inherit;
+        }
+        
+        .field textarea {
+            height: 130px;
+            resize: vertical;
+        }
+        
+        .field input::placeholder,
+        .field textarea::placeholder {
+            color: #8a8a8a;
+        }
+        
+        .field input:focus,
+        .field textarea:focus {
+            outline: none;
+            border-color: #A855F7;
+        }
+        
+        .send-btn {
+            width: 100%;
+            margin-top: 6px;
+            padding: 14px;
+            background: #A855F7;
+            color: #050505;
+            font-size: 14px;
+            font-weight: bold;
+            font-family: inherit;
+            border: none;
+            border-radius: 14px;
+            cursor: pointer;
+        }
+        
+        .send-btn i {
+            margin: 0 6px;
+        }
+        
+        .send-btn:hover {
+            background: #9333EA;
+        }
+        
+        /* ---------- mobile ---------- */
+        @media (max-width: 900px) {
+            .ibnat-contact .wrap {
+                flex-direction: column;
+                gap: 40px;
+            }
+        
+            .contact-left {
+                flex: none;
+                width: 100%;
+            }
+        
+            .contact-left h2 {
+                font-size: 32px;
+            }
+        
+            .contact-stats {
+                flex-wrap: wrap;
+                gap: 14px 0;
+            }
+        }
+        
+        @media (max-width: 600px) {
+            .form-row {
+                flex-direction: column;
+            }
+        }
+        
+        
+        /* ---------- footer ---------- */
+        .ibnat-footer {
+            padding: 60px 20px 0;
+            background: #050505;
+        }
+        
+        .ibnat-footer .wrap {
+            max-width: 1200px;
+        }
+        
+        .footer-top {
+            display: flex;
+            padding-bottom: 50px;
+        }
+        
+        .footer-col {
+            flex: 1;
+            min-width: 0;
+            padding: 0 30px;
+            border-left: 1px solid rgba(168, 85, 247, 0.           25);
+        }
+        
+        .footer-col:first-child {
+            flex: 1.3;
+            padding-left: 0;
+            border-left: none;
+        }
+        
+        .footer-col:last-child {
+            padding-right: 0;
+        }
+        
+        .footer-col h4 {
+            font-size: 20px;
+            margin-bottom: 26px;
+        }
+        
+        .footer-col h4::after {
+            content: "";
+            display: block;
+            width: 36px;
+            height: 3px;
+            background: #A855F7;
+            margin-top: 8px;
+        }
+        
+        .footer-logo {
+            font-size: 40px;
+            font-weight: bold;
+            line-height: 1.2;
+            margin-bottom: 14px;
+        }
+        
+        .footer-about p {
+            font-size: 17px;
+            color: #d0d0d0;
+            margin-bottom: 22px;
+            max-width: 330px;
+        }
+        
+        .footer-social {
+            display: flex;
+            gap: 14px;
+        }
+        
+        .footer-social a {
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            border: 1px solid rgba(168, 85, 247, 0.8);
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(168, 85, 247, 0.2);
+        }
+        
+        .footer-social a:hover {
+            background: #A855F7;
+            color: #050505;
+        }
+        
+        .footer-links a {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 9px 0;
+            font-size: 16px;
+        }
+        
+        .footer-links a i {
+            font-size: 12px;
+            color: #A855F7;
+        }
+        
+        .footer-links a:hover {
+            color: #A855F7;
+        }
+        
+        .footer-item {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 18px;
+        }
+        
+        .footer-icon {
+            width: 50px;
+            height: 50px;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            color: #A855F7;
+            background: #0f1f08;
+            border: 1px solid rgba(168, 85, 247, 0.8);
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(168, 85, 247, 0.2);
+        }
+        
+        .footer-item h5 {
+            font-size: 16px;
+            font-weight: normal;
+        }
+        
+        .footer-item p {
+            font-size: 14px;
+            color: #b5b5b5;
+        }
+        
+        .footer-text {
+            font-size: 15px;
+            color: #d0d0d0;
+            margin-bottom: 22px;
+        }
+        
+        .footer-email {
+            position: relative;
+            display: flex;
+            align-items: center;
+            height: 56px;
+            padding: 0 8px 0 20px;
+            background: #070b05;
+            border: 1px solid rgba(168, 85, 247, 0.8);
+            border-radius: 30px;
+            box-shadow: 0 0 14px rgba(168, 85, 247, 0.2);
+        }
+        
+        .footer-email > i {
+            color: #cfcfcf;
+            margin-right: 12px;
+        }
+        
+        .footer-email input {
+            flex: 1;
+            min-width: 0;
+            background: transparent;
+            border: none;
+            color: #fff;
+            font-size: 14px;
+            font-family: inherit;
+        }
+        
+        .footer-email input:focus {
+            outline: none;
+        }
+        
+        .footer-email input::placeholder {
+            color: #8a8a8a;
+        }
+        
+        .footer-email button {
+            width: 38px;
+            height: 38px;
+            flex-shrink: 0;
+            background: #A855F7;
+            color: #050505;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        
+        .footer-email button:hover {
+            background: #9333EA;
+        }
+        
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 22px 0;
+            border-top: 1px solid rgba(168, 85, 247, 0.7);
+            font-size: 14px;
+        }
+        
+        .footer-top-btn {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 14px;
+        }
+        
+        .footer-top-btn span {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #A855F7;
+            border: 1px solid rgba(168, 85, 247, 0.8);
+            border-radius: 50%;
+        }
+        
+        .footer-top-btn:hover span {
+            background: #A855F7;
+            color: #050505;
+        }
+        
+        /* ---------- mobile---------- */
+        @media (max-width: 900px) {
+            .footer-top {
+                flex-direction: column;
+                gap: 36px;
+            }
+        
+            .footer-col,
+            .footer-col:first-child,
+            .footer-col:last-child {
+                flex: none;
+                padding: 0;
+                border-left: none;
+            }
+        
+            .footer-bottom {
+                flex-direction: column;
+                gap: 14px;
+                text-align: center;
+            }
+        }
+
+
+        
+        /* Custom Cursor */
+        .custom-cursor-dot,
+        .custom-cursor-outline {
+            position: fixed;
+            top: 0;
+            left: 0;
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 99999;
+            opacity: 0;
+            will-change: transform;
+        }
+
+        .custom-cursor-dot {
+            width: 8px;
+            height: 8px;
+            background: #A855F7;
+            transform: translate3d(-50%, -50%, 0);
+            transition: width 0.2s ease, height 0.2s ease;
+        }
+
+        .custom-cursor-outline {
+            width: 36px;
+            height: 36px;
+            border: 1.5px solid rgba(168, 85, 247, 0.65);
+            transform: translate3d(-50%, -50%, 0);
+            transition:
+                width 0.25s ease,
+                height 0.25s ease,
+                border-color 0.25s ease,
+                background-color 0.25s ease;
+        }
+
+        .custom-cursor-dot.is-visible,
+        .custom-cursor-outline.is-visible {
+            opacity: 1;
+        }
+
+        .custom-cursor-outline.is-hovering {
+            width: 52px;
+            height: 52px;
+            border-color: #A855F7;
+            background-color: rgba(168, 85, 247, 0.07);
+        }
+
+        .custom-cursor-dot.is-hovering {
+            width: 6px;
+            height: 6px;
+        }
+
+        /* Desktop mouse devices only */
+        @media (hover: hover) and (pointer: fine) {
+            body,
+            a,
+            button,
+            input,
+            textarea,
+            select,
+            [role="button"] {
+                cursor: none;
+            }
+        }
+
+        /* Hide custom cursor on touch devices */
+        @media (hover: none), (pointer: coarse) {
+            .custom-cursor-dot,
+            .custom-cursor-outline {
+                display: none !important;
+            }
+        }
+
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="wrap">
+            <a href="#"><div class="logo"><span class="green">&lt;/&gt;</span> Ibnat</div></a>
+
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="menu-btn"><i class="fa-solid fa-bars"></i></label>
+
+            <div class="menu">
+                <a href="#home" class="active">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#services">Services</a>
+                <a href="#portfolio">Projects</a>
+                <a href="#contact">Contact</a>
+            </div>
+
+            <a href="#contact" class="nav-btn">Let's Talk</a>
+        </div>
+    </div>
+
+    <!-- Hero -->
+    <section class="hero" id="home">
+        <div class="wrap">
+            <div class="hero-text">
+                <p class="hello">HI, I'M IBNE AL HASAN (IBNAT)</p>
+                <h1>I Build Digital Experiences That <br><span class="green">Make an Impact.</span></h1>
+                <p>I'm a junior web developer and web designer, focused on creating modern, fast and user-friendly websites. I turn ideas into clean code and beautiful interfaces.</p>
+
+                <div class="hero-btn">
+                    <a href="#portfolio" class="btn">View My Work &#8599;</a>
+                    <a href="#contact" class="btn-line">Contact Me &#8599;</a>
+                </div>
+
+                <div class="stats">
+                    <div class="stat">
+                        <h3>1+</h3>
+                        <p>Year's Experience</p>
+                    </div>
+                    <div class="stat">
+                        <h3>6+</h3>
+                        <p>Projects Completed</p>
+                    </div>
+                    <div class="stat">
+                        <h3>15+</h3>
+                        <p>Happy Clients</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-img">
+                <img src="images/Ibnat.jpeg" >
+
+            </div>
+        </div>
+
+        <div class="social">
+            <a href="https://github.com/Ibne-Al-Hasn"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/ibnat-undefined-5b8809377/"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://www.facebook.com/ibna.al.hasan.2024"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://x.com/ibnat2008"><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
+    </section>
+
+    <!-- 2. About -->
+    <section class="ibnat-about" id="about">
+        <div class="wrap">
+            <div class="about-img">
+                <img src="images/about.png">
+            </div>
+            <div class="about-text">
+                <h2>About <span class="green">Me</span></h2>
+                <p>I'm Ibne Al Hasan Ibnat, a junior web developer and web designer from Bangladesh. I enjoy creating websites that balance visual appeal with usability.</p>
+                <p>My journey combines front-end development, website design, and hands-on experimentation with different web technologies. I am continuously improving my skills and building projects that reflect my growth.</p>
+                <a href="#contact" class="btn">Let's Talk &#8599;</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Skills -->
+    <section class="ibnat-skills" id="skills">
+        <div class="wrap">
+            <div class="skill-left">
+                <div class="skill-tag-row">
+                    <div class="skill-tag">
+                        <i class="fa-solid fa-code green"></i> Skills
+                    </div>
+                    <span class="skill-line"></span>
+                </div>
+
+                <p class="skill-label">TOOLS &amp; TECHNOLOGIES I USE</p>
+                <h2>Turning Ideas Into <br><span class="green">Clean &amp; Modern</span> Websites<span class="green">.</span></h2>
+                <p class="skill-desc">I work with modern web technologies to build fast, responsive, and visually appealing websites. Here are the skills and tools I use to bring ideas to life.</p>
+
+                <div class="skill-row">
+                    <div class="skill-item"><i class="devicon-html5-plain colored"></i> HTML</div>
+                    <div class="skill-item"><i class="devicon-css3-plain colored"></i> CSS</div>
+                    <div class="skill-item active"><i class="devicon-tailwindcss-original colored"></i> Tailwind CSS</div>
+                    <div class="skill-item"><i class="devicon-javascript-plain colored"></i> JavaScript</div>
+                </div>
+
+                <div class="skill-row">
+                    <div class="skill-item"><i class="devicon-wordpress-plain colored"></i> WordPress</div>
+                    <div class="skill-item"><span class="skill-badge elementor">E</span> Elementor</div>
+                    <div class="skill-item"><span class="skill-badge webflow">W</span> Webflow</div>
+                    <div class="skill-item"><i class="devicon-php-plain colored"></i> PHP</div>
+                </div>
+
+                <div class="skill-row">
+                    <div class="skill-item"><i class="devicon-vscode-plain colored"></i> VS Code</div>
+                    <div class="skill-item"><i class="devicon-git-plain colored"></i> Git</div>
+                    <div class="skill-item"><i class="devicon-figma-plain colored"></i> Figma</div>
+                    
+                </div>
+            </div>
+            <div class="skill-img">
+                <img src="images/skill.png" alt="Skills">
+            </div>
+        </div> 
+    </section>
+
+    <!-- 4. Services -->
+    <section class="ibnat-services" id="services">
+        <div class="wrap">
+            <div class="service-left">
+                <div class="skill-tag-row">
+                    <div class="skill-tag">
+                        <i class="fa-solid fa-cube green"></i> Services
+                    </div>
+                    <span class="skill-line"></span>
+                </div>
+                <p class="service-label">WHAT I CAN DO FOR YOU</p>
+                <h2>Designing &amp; Developing <br><span class="green">Digital Solutions.</span></h2>
+                <p class="service-desc">I offer a range of web-related services to help individuals, businesses, and startups build their online presence and achieve their goals.</p>
+                <a href="#contact" class="btn">Get In Touch &#8594;</a>
+
+                
+            </div>
+
+            <div class="service-grid">
+                <div class="service-card">
+                    <i class="fa-solid fa-desktop"></i>
+                    <h3>Website Design</h3>
+                    <p>Modern, clean and responsive designs that look great on all devices.</p>
+                    <a href="#contact" class="service-arrow"><i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+                <div class="service-card">
+                    <i class="fa-solid fa-code"></i>
+                    <h3>Web Development</h3>
+                    <p>Fast, secure and scalable websites using modern technologies.</p>
+                    <a href="#contact" class="service-arrow"><i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+                <div class="service-card">
+                    <i class="fa-brands fa-wordpress"></i>
+                    <h3>WordPress Development</h3>
+                    <p>Custom themes, tweaks and full website setup.</p>
+                    <a href="#contact" class="service-arrow"><i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+                <div class="service-card">
+                    <i class="fa-solid fa-pen-ruler"></i>
+                    <h3>UI/UX Design</h3>
+                    <p>User-friendly interfaces that create better experiences.</p>
+                    <a href="#contact" class="service-arrow"><i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+                <div class="service-card">
+                    <i class="fa-solid fa-bolt"></i>
+                    <h3>Website Optimization</h3>
+                    <p>Improve speed, performance and SEO for better results.</p>
+                    <a href="#contact" class="service-arrow"><i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+                <div class="service-card">
+                    <i class="fa-solid fa-headset"></i>
+                    <h3>Ongoing Support</h3>
+                    <p>Maintenance, updates and quick fixes when you need.</p>
+                    <a href="#contact" class="service-arrow"><i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Portfolio -->
+    <section class="ibnat-portfolio" id="portfolio">
+        <div class="wrap">
+            <div class="skill-tag-row">
+                <div class="skill-tag">
+                    <i class="fa-solid fa-code green"></i> Projects
+                </div>
+                <span class="skill-line"></span>
+            </div>
+
+            <p class="project-label">MY WORK</p>
+            <h2 class="project-title-main">Some of My <span class="green">Recent Projects.</span></h2>
+            <p class="project-desc">Here are a few websites I've built, designed and developed as part of my learning journey. Each project helped me grow and sharpen my skills.</p>
+
+            <div class="project-box">
+                <div class="project-card">
+                    <span class="project-num">01</span>
+                    <div class="project-img">
+                        <img src="images/1-fashion.png" alt="Fastfried Chicken">
+                    </div>
+                    <p>E-commerce<span class="green">&#8599;</span></p>
+                    <h3>Fashion E-commerce Website</h3>
+                    <div class="project-live"><a href="https://ibne-al-hasn.github.io/RRF-Template-10/">Live Preview &#8599;</a></div>
+                </div>
+
+                <div class="project-card">
+                    <span class="project-num">02</span>
+                    <div class="project-img">
+                        <img src="images/2-ai-builder.png" alt="OxyZen">
+                    </div>
+                    <p>Landing page<span class="green">&#8599;</span></p>
+                    <h3>AI Website Builder Landing Page <span class="green">&#8599;</span></h3>
+                    <div class="project-live"><a href="https://ibne-al-hasn.github.io/RRF-Template-2/">Live Preview &#8599;</a></div>
+                </div>
+
+                <div class="project-card">
+                    <span class="project-num">03</span>
+                    <div class="project-img">
+                        <img src="images/3-data-science.png" alt="Vvideoo">
+                    </div>
+                    <p>Landing page <span class="green">&#8599;</span></p>
+                    <h3>Data Science & AI Course Landing Page<span class="green">&#8599;</span></h3>
+
+                    <div class="project-live"><a href="https://ibne-al-hasn.github.io/RRF-Template_01/">Live Preview &#8599;</a></div>
+                </div>
+
+                <div class="project-card">
+                    <span class="project-num">04</span>
+                    <div class="project-img">
+                        <img src="images/4-ux-portfolio.png" alt="Ibnat's Zone">
+                    </div>
+                    <p>Portfolio Templete<span class="green">&#8599;</span></p>
+                    <h3>UX Designer Portfolio Template <span class="green">&#8599;</span></h3>
+                    <div class="project-live"><a href="https://ibne-al-hasn.github.io/RRF-Template-9/">Live Preview &#8599;</a></div>
+                </div>
+
+                <div class="project-card">
+                    <span class="project-num">05</span>
+                    <div class="project-img">
+                        <img src="images/5-plumbing.png" alt="Web Learning Group">
+                    </div>
+                    <p>Business website</p>
+                    <h3>Plumbing Service Website <span class="green">&#8599;</span></h3>
+                    <div class="project-live"><a href="https://ibne-al-hasn.github.io/RRF-Template-3-8/">Live Preview &#8599;</a></div>
+                </div>
+
+                <div class="project-card">
+                    <span class="project-num">06</span>
+                    <div class="project-img">
+                        <img src="images/6-vvideo.png" alt="Personal Portfolio (Figma)">
+                    </div>
+                    <p>Webflow</p>
+                    <h3>VVideo — Video Production Website <span class="green">&#8599;</span></h3>
+                    <div class="project-live"><a href="https://vvideoo.webflow.io/">Live Preview &#8599;</a></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Contact -->
+    <section class="ibnat-contact" id="contact">
+        <div class="wrap">
+            <div class="contact-left">
+                <div class="skill-tag-row">
+                    <div class="skill-tag">
+                        <i class="fa-solid fa-paper-plane green"></i> Contact
+                    </div>
+                    <span class="skill-line"></span>
+                </div>
+
+                <p class="skill-label">LET'S WORK TOGETHER</p>
+                <h2>Have a Project <br><span class="green">in Mind?</span></h2>
+                <p class="contact-desc">I'm always open to discussing new projects, creative ideas, collaborations, or just a friendly chat. Feel free to reach out — I'll get back to you as soon as possible.</p>
+
+                <div class="contact-info">
+                    <div class="contact-icon"><i class="fa-regular fa-envelope"></i></div>
+                    <div class="contact-text">
+                        <h4>Email</h4>
+                        <p>ibnat1231@gmail.com</p>
+                    </div>
+                    <a href="mailto:ibnat1231@gmail.com" class="contact-arrow"><i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+                <div class="contact-info">
+                    <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+                    <div class="contact-text">
+                        <h4>Location</h4>
+                        <p>Rangpur, Bangladesh</p>
+                    </div>
+                    <a href="https://maps.app.goo.gl/Yt8tHmZuA44UmXdg7" class="contact-arrow"><i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+                <div class="contact-info">
+                    <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
+                    <div class="contact-text">
+                        <h4>Phone</h4>
+                        <p>+880 1577576079</p>
+                    </div>
+                    <a href="#" class="contact-arrow"><i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+                <div class="contact-info">
+                    <div class="contact-icon"><i class="fa-solid fa-link"></i></div>
+                    <div class="contact-text">
+                        <h4>Socials</h4>
+                        <p><a href="#">LinkedIn</a> <span class="green">&middot;</span> <a href="#">GitHub</a> <span class="green">&middot;</span> <a href="#">Facebook</a> <span class="green">&middot;</span> <a href="#">X</a></p>
+                    </div>
+                    <a href="#" class="contact-arrow"><i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+                <div class="contact-stats">
+                    <div class="contact-stat">
+                        <h3>1+</h3>
+                        <p>Years Experience</p>
+                    </div>
+                    <div class="contact-stat">
+                        <h3>6+</h3>
+                        <p>Projects Completed</p>
+                    </div>
+                    <div class="contact-stat">
+                        <h3>15+</h3>
+                        <p>Happy Clients</p>
+                    </div>
+                </div>
+
+                <p class="contact-note">Let's create something amazing.</p>
+            </div>
+
+            <div class="contact-right">
+                <form class="contact-form" id="contact-form">
+                    <span class="form-bar"></span>
+                    <h3>Send Me a <span class="green">Message</span></h3>
+                    <p class="form-sub">Fill out the form below and I'll get back to you as soon as possible.</p>
+
+                    <div class="form-row">
+                        <div class="field">
+                            <i class="fa-regular fa-user"></i>
+                            <input type="text" id="first-name" name="first_name" placeholder="First Name *" required>
+                        </div>
+                        <div class="field">
+                            <i class="fa-regular fa-user"></i>
+                            <input type="text" id="last-name" name="last_name" placeholder="Last Name *" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="field">
+                            <i class="fa-regular fa-envelope"></i>
+                            <input type="email" id="email" name="email" placeholder="Your Email *" required>
+                        </div>
+                        <div class="field">
+                            <i class="fa-solid fa-phone"></i>
+                            <input type="tel" id="phone" name="phone" placeholder="Phone Number *" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="field">
+                            <i class="fa-solid fa-align-left"></i>
+                            <input type="text" id="subject" name="subject" placeholder="Subject *" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="field">
+                            <i class="fa-regular fa-comment-dots"></i>
+                            <textarea id="message" name="message" rows="5" placeholder="Your Message *" required></textarea>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="send-btn"><i class="fa-solid fa-paper-plane"></i> Send Message <i class="fa-solid fa-arrow-right"></i></button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="ibnat-footer">
+        <div class="wrap">
+            <div class="footer-top">
+                <div class="footer-col footer-about">
+                    <a href="#"><div class="footer-logo"><span class="green">&lt;/&gt;</span> Ibnat</div></a>              
+                    <p>Designing Better Web Experiences, One Pixel at a Time.</p>
+                    <div class="footer-social">
+                        <a href="https://github.com/Ibne-Al-Hasn"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/ibnat-undefined-5b8809377/"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://www.facebook.com/ibna.al.hasan.2024"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://x.com/ibnat2008"><i class="fa-brands fa-x-twitter"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <div class="footer-links">
+                        <a href="#home">Home <i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="#about">About <i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="#skills">Skills <i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="#portfolio">Projects <i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="#contact">Contact <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Get In Touch</h4>
+                    <div class="footer-item">
+                        <div class="footer-icon"><i class="fa-solid fa-envelope"></i></div>
+                        <div>
+                            <h5>Email</h5>
+                            <p>ibnat1231@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="footer-item">
+                        <div class="footer-icon"><i class="fa-solid fa-location-dot"></i></div>
+                        <div>
+                            <h5>Location</h5>
+                            <p>Rangpur, Bangladesh</p>
+                        </div>
+                    </div>
+                    <div class="footer-item">
+                        <div class="footer-icon"><i class="fa-regular fa-clock"></i></div>
+                        <div>
+                            <h5>Available</h5>
+                            <p>Mon - Sun, 9AM - 9PM</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Stay Updated</h4>
+                    <p class="footer-text">Get updates on my latest projects, skills and personal journey.</p>
+                    <div class="footer-email">
+                        <i class="fa-regular fa-envelope"></i>
+                        <input type="email" placeholder="Your email address">
+                        <button type="button"><i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Ibne Al Hasan Ibnat. All rights reserved.</p>
+                <a href="#home" class="footer-top-btn">Back to Top <span><i class="fa-solid fa-arrow-up"></i></span></a>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor-dot"></div>
+    <div class="custom-cursor-outline"></div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script>
+    // ===== 1. Put your 4 EmailJS values here =====
+    const PUBLIC_KEY = "13vyiDbgk6aEq4cf0";
+    const SERVICE_ID = "service_5hesjkc";
+    const ADMIN_TEMPLATE_ID = "template_mgixeql";
+    const CUSTOMER_TEMPLATE_ID = "template_7otdzah";
+    // =============================================
+
+
+    // ===== 2. Navbar: highlight the section you are on =====
+    const sections = document.querySelectorAll("section");
+    const links = document.querySelectorAll(".menu a");
+    const menuToggle = document.getElementById("menu-toggle");
+
+    window.addEventListener("scroll", function () {
+        let current = "home";
+
+        sections.forEach(function (section) {
+            if (window.scrollY >= section.offsetTop - 150) {
+                current = section.getAttribute("id");
+            }
+        });
+
+        // at the very bottom of the page, highlight Contact
+        if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 2) {
+            current = "contact";
+        }
+
+        links.forEach(function (link) {
+            link.classList.remove("active");
+            if (link.getAttribute("href") === "#" + current) {
+                link.classList.add("active");
+            }
+        });
+    });
+
+    // on mobile, close the menu after clicking a link
+    links.forEach(function (link) {
+        link.addEventListener("click", function () {
+            menuToggle.checked = false;
+        });
+    });
+
+
+    // ===== 3. Contact form: send 2 emails with EmailJS =====
+    emailjs.init({ publicKey: PUBLIC_KEY });
+
+    const contactForm = document.getElementById("contact-form");
+
+    contactForm.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const sendBtn = contactForm.querySelector(".send-btn");
+        sendBtn.disabled = true;
+
+        // 1st email: details go to the admin
+        emailjs.sendForm(SERVICE_ID, ADMIN_TEMPLATE_ID, contactForm)
+            .then(function () {
+                // 2nd email: confirmation goes to the customer
+                return emailjs.sendForm(SERVICE_ID, CUSTOMER_TEMPLATE_ID, contactForm);
+            })
+            .then(function () {
+                alert("Message sent successfully!");
+                contactForm.reset();
+                sendBtn.disabled = false;
+            })
+            .catch(function (error) {
+                console.log("EmailJS error:", error);
+                alert("Something went wrong. Please try again.");
+                sendBtn.disabled = false;
+            });
+    });
+
+    //curser
+    
+    const cursorDot = document.querySelector(".custom-cursor-dot");
+    const cursorOutline = document.querySelector(".custom-cursor-outline");
+
+    if (
+        cursorDot &&
+        cursorOutline &&
+        window.matchMedia("(hover: hover) and (pointer: fine)").matches
+    ) {
+        let mouseX = 0;
+        let mouseY = 0;
+        let outlineX = 0;
+        let outlineY = 0;
+
+        const interactiveElements = document.querySelectorAll(
+            'a, button, input, textarea, select, [role="button"], .cursor-hover'
+        );
+
+        window.addEventListener("mousemove", (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+
+            cursorDot.style.transform =
+                `translate3d(${mouseX}px, ${mouseY}px, 0) translate(-50%, -50%)`;
+
+            cursorDot.classList.add("is-visible");
+            cursorOutline.classList.add("is-visible");
+        }, { passive: true });
+
+        function animateCursor() {
+            // Smooth following effect
+            outlineX += (mouseX - outlineX) * 0.16;
+            outlineY += (mouseY - outlineY) * 0.16;
+
+            cursorOutline.style.transform =
+                `translate3d(${outlineX}px, ${outlineY}px, 0) translate(-50%, -50%)`;
+
+            requestAnimationFrame(animateCursor);
+        }
+
+        animateCursor();
+
+        interactiveElements.forEach((element) => {
+            element.addEventListener("mouseenter", () => {
+                cursorOutline.classList.add("is-hovering");
+                cursorDot.classList.add("is-hovering");
+            });
+
+            element.addEventListener("mouseleave", () => {
+                cursorOutline.classList.remove("is-hovering");
+                cursorDot.classList.remove("is-hovering");
+            });
+        });
+
+        document.addEventListener("mouseleave", () => {
+            cursorDot.classList.remove("is-visible");
+            cursorOutline.classList.remove("is-visible");
+        });
+
+        document.addEventListener("mouseenter", () => {
+            cursorDot.classList.add("is-visible");
+            cursorOutline.classList.add("is-visible");
+        });
+    }
+
+</script>
+
+</body>
+</html>
